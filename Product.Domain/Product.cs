@@ -1,4 +1,6 @@
-﻿namespace Product.Domain
+﻿using Domain.Enum;
+
+namespace Domain
 {
     public class Product
     {
@@ -6,5 +8,6 @@
         public int Id { get; set; }
         public Producer Producer { get; set; }
         public string Logo { get; set; }
+        public Category Category { get; set; }
     }
 }

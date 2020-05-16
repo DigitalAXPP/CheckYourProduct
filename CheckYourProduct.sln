@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckYourProduct", "CheckYo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckYourProduct.UI", "CheckYourProduct.UI\CheckYourProduct.UI.csproj", "{F150350C-95CE-4176-9BBF-C9BB0B69BC6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Domain", "Product.Domain\Product.Domain.csproj", "{65B91FE4-2E2D-476C-8B40-0F4FD09FDBCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Product.Domain\Domain.csproj", "{65B91FE4-2E2D-476C-8B40-0F4FD09FDBCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

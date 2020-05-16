@@ -28,7 +28,7 @@
                 <TextBlock Text="Name:"
                            FontSize="20"
                            FontWeight="Bold"/>
-                <TextBlock Text="Oreo"
+                <TextBlock Text="{Binding Path=Item.Name}"
                            Margin="10 0 0 0"
                            FontSize="18"/>
             </StackPanel>
@@ -36,7 +36,7 @@
                 <TextBlock Text="Company:"
                            FontSize="20"
                            FontWeight="Bold"/>
-                <TextBlock Text="Oreo Ltd."
+                <TextBlock Text="{Binding Path=Item.Category}"
                            Margin="10 0 0 0"
                            FontSize="18"/>
             </StackPanel>

@@ -1,6 +1,6 @@
-﻿using Product.Domain.Enum;
+﻿using Domain.Enum;
 
-namespace Product.Domain
+namespace Domain
 {
     public class Owner
     {

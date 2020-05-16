@@ -1,4 +1,4 @@
-﻿namespace Product.Domain.Enum
+﻿namespace Domain.Enum
 {
     public enum LegalForm
     {
