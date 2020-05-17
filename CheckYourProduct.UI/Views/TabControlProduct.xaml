@@ -27,27 +27,34 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Name:"
                            FontSize="20"
-                           FontWeight="Bold"/>
-                <TextBlock Text="{Binding Path=Item.Name}"
-                           Margin="10 0 0 0"
+                           FontWeight="Bold"
+                           Width="100"
+                           Margin="10"/>
+                <TextBox Text="{Binding Path=Item.Name, Mode=TwoWay}"
+                           Margin="10 10 0 0"
                            FontSize="18"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Company:"
                            FontSize="20"
-                           FontWeight="Bold"/>
-                <TextBlock Text="{Binding Path=Item.Category}"
-                           Margin="10 0 0 0"
+                           FontWeight="Bold"
+                           Width="100"
+                           Margin="10"/>
+                <TextBox Text="{Binding Path=Item.Category, Mode=TwoWay}"
+                           Margin="10 10 0 0"
                            FontSize="18"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Owners:"
                            FontSize="20"
-                           FontWeight="Bold"/>
+                           FontWeight="Bold"
+                           Width="100"
+                           Margin="10"/>
                 <TextBlock Text="God"
-                           Margin="10 0 0 0"
+                           Margin="10 10 0 0"
                            FontSize="18"/>
             </StackPanel>
+            <TextBlock Text="{Binding Path=Item.Name}"/>
         </StackPanel>
     </Grid>
 </UserControl>
