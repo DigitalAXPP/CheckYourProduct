@@ -28,10 +28,20 @@ namespace CheckYourProduct.UI.ViewModel
             set { _item = value; }
         }
 
+        private Product _testItem;
+
+        public Product TestItem
+        {
+            get { return _testItem; }
+            set { _testItem = value; }
+        }
+
+
         public ProductViewModel()
         {
             Item = new Product()
             {
+                Id = 1,
                 Name = "Fanta",
                 Category = Category.Food,
                 Producer = producer

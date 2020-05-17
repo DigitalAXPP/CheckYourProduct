@@ -7,14 +7,28 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Button Content="Back"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Margin="15"/>
         <StackPanel VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     Orientation="Horizontal">
-            <TextBox Text="..." 
-                 Opacity="50"
-                 Width="125"/>
-            <Button Content="Search"
-                    Margin="15 0 0 0"/>
+            <TextBox x:Name="TextBox_Search"
+                     Text="Search" 
+                     Opacity="50"
+                     Width="125"/>
+            <Button x:Name="Button_Search"
+                    Content="Search"
+                    Margin="15 0 0 0"
+                    Click="SearchButton"/>
         </StackPanel>
+        <ListView x:Name="TestListView"
+                  VerticalAlignment="Bottom"
+                  HorizontalAlignment="Right"
+                  Margin="15">
+            <ListViewItem Content="{Binding Path=Name}"/>
+            <ListViewItem Content="{Binding Path=Category}"/>
+        </ListView>
     </Grid>
 </UserControl>
