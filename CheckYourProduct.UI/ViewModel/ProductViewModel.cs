@@ -1,10 +1,12 @@
-﻿using Domain;
+﻿using CheckYourProduct.UI.Commands;
+using Domain;
 using Domain.Enum;
 using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace CheckYourProduct.UI.ViewModel
 {
-    public class ProductViewModel
+    public class ProductViewModel : ProductViewModelBase
     {
         public static List<Owner> owner = new List<Owner>() 
         {
@@ -33,12 +35,18 @@ namespace CheckYourProduct.UI.ViewModel
         public Product TestItem
         {
             get { return _testItem; }
-            set { _testItem = value; }
+            set 
+            { 
+                _testItem = value;
+                OnPropertyChanged("TestItem");
+            }
         }
 
+        private SearchKeyword searchKeyword;
 
         public ProductViewModel()
         {
+            searchKeyword = new SearchKeyword(this);
             Item = new Product()
             {
                 Id = 1,
@@ -48,5 +56,36 @@ namespace CheckYourProduct.UI.ViewModel
             };
         }
 
+        public void Search(string Enumerator)
+        {
+            List<Product> list = new List<Product>()
+            {
+                new Product()
+                {
+                    Name = "TestSearch1",
+                    Category = Category.Fashion
+                },
+                new Product()
+                {
+                    Name = "TestSearch2",
+                    Category = Category.Food
+                },
+                new Product()
+                {
+                    Name = "TestSearch3",
+                    Category = Category.IT
+                }
+            };
+            int i = int.Parse(Enumerator);
+            TestItem = list[i];
+        }
+
+        internal ICommand SearchCommand
+        {
+            get
+            {
+                return searchKeyword;
+            }
+        }
     }
 }
