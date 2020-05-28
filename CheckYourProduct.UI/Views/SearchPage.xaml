@@ -21,14 +21,18 @@
             <Button x:Name="Button_Search"
                     Content="Search"
                     Margin="15 0 0 0"
-                    Click="SearchButton"/>
+                    Command="{Binding Path=SearchCommand}"/>
+            <!--Click="SearchButton"-->
+                    
         </StackPanel>
         <ListView x:Name="TestListView"
                   VerticalAlignment="Bottom"
                   HorizontalAlignment="Right"
                   Margin="15">
-            <ListViewItem Content="{Binding Path=Name}"/>
-            <ListViewItem Content="{Binding Path=Category}"/>
+            <ListViewItem Content="{Binding Path=TestItem.Name, Mode=TwoWay}"/>
+            <ListViewItem Content="{Binding Path=TestItem.Category, Mode=TwoWay}"/>
+            <!--<ListViewItem Content="{Binding Path=Name, Mode=TwoWay}"/>
+            <ListViewItem Content="{Binding Path=Category, Mode=TwoWay}"/>-->
         </ListView>
     </Grid>
 </UserControl>

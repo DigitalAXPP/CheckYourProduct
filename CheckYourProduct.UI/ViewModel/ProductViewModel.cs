@@ -56,7 +56,7 @@ namespace CheckYourProduct.UI.ViewModel
             };
         }
 
-        public void Search(string Enumerator)
+        public void Search()
         {
             List<Product> list = new List<Product>()
             {
@@ -76,8 +76,8 @@ namespace CheckYourProduct.UI.ViewModel
                     Category = Category.IT
                 }
             };
-            int i = int.Parse(Enumerator);
-            TestItem = list[i];
+            //int i = int.Parse(Enumerator);
+            TestItem = list[1];
         }
 
         internal ICommand SearchCommand
