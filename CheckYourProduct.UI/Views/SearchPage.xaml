@@ -15,7 +15,7 @@
                     HorizontalAlignment="Center"
                     Orientation="Horizontal">
             <TextBox x:Name="TextBox_Search"
-                     Text="Search" 
+                     Text="{Binding Path=ProductIndex}" 
                      Opacity="50"
                      Width="125"/>
             <Button x:Name="Button_Search"

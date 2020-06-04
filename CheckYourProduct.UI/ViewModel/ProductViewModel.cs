@@ -8,6 +8,7 @@ namespace CheckYourProduct.UI.ViewModel
 {
     public class ProductViewModel : ProductViewModelBase
     {
+        public string ProductIndex { get; set; } = "Enter index";
         public static List<Owner> owner = new List<Owner>() 
         {
             new Owner() { 
@@ -43,6 +44,7 @@ namespace CheckYourProduct.UI.ViewModel
         }
 
         private SearchKeyword searchKeyword;
+        private int result;
 
         public ProductViewModel()
         {
@@ -81,8 +83,10 @@ namespace CheckYourProduct.UI.ViewModel
                     Category = Category.IT
                 }
             };
-            //int i = int.Parse(Enumerator);
-            TestItem = list[1];
+            if (int.TryParse(ProductIndex, out result))
+            {
+                TestItem = list[result];
+            }
         }
 
         public ICommand SearchCommand
