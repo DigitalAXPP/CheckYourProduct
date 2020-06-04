@@ -47,6 +47,11 @@ namespace CheckYourProduct.UI.ViewModel
         public ProductViewModel()
         {
             searchKeyword = new SearchKeyword(this);
+            TestItem = new Product()
+            {
+                Name = "TestSearch1",
+                Category = Category.Fashion
+            };
             Item = new Product()
             {
                 Id = 1,
@@ -80,7 +85,7 @@ namespace CheckYourProduct.UI.ViewModel
             TestItem = list[1];
         }
 
-        internal ICommand SearchCommand
+        public ICommand SearchCommand
         {
             get
             {
