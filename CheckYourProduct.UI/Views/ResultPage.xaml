@@ -12,9 +12,22 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.ColumnSpan="2"
+                    Margin="25"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="CheckYourProduct"/>
+            <TextBox x:Name="SearchBox"
+                     Text="..."
+                     Width="400"
+                     Margin="10 0 10 0"/>
+            <Button x:Name="SearchButton"
+                    Content="Search"/>
+        </StackPanel>
     </Grid>
 </UserControl>
