@@ -22,8 +22,10 @@
         </Grid.RowDefinitions>
         <TabControl TabStripPlacement="Left"
                     Grid.RowSpan="2"
-                    Grid.ColumnSpan="2">
-            <TabItem Header="Search">
+                    Grid.ColumnSpan="2"
+                    x:Name="ControlTab">
+            <TabItem Header="Search"
+                     x:Name="SearchTab">
                 <views:SearchPage/>
             </TabItem>
             <TabItem Header="Product">

@@ -1,7 +1,9 @@
 ﻿using CheckYourProduct.UI.Commands;
+using CheckYourProduct.UI.Views;
 using Domain;
 using Domain.Enum;
 using System.Collections.Generic;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace CheckYourProduct.UI.ViewModel
@@ -86,6 +88,7 @@ namespace CheckYourProduct.UI.ViewModel
             if (int.TryParse(ProductIndex, out result))
             {
                 TestItem = list[result];
+                
             }
         }
 
