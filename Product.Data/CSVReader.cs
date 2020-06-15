@@ -12,6 +12,8 @@ namespace Product.Data
         {
             using (var reader = new StreamReader(@"C:\Users\DigitalAXPP\source\repos\CheckYourProduct\Product.Data\Files\TestData.csv"))
             {
+                products = new List<Domain.Product>();
+                var headerline = reader.ReadLine();
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();

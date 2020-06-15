@@ -8,4 +8,8 @@
     <Folder Include="Files\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Product.Domain\Domain.csproj" />
+  </ItemGroup>
+
 </Project>
