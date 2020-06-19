@@ -21,7 +21,7 @@ namespace CheckYourProduct.UI.Commands
 
         public void Execute(object parameter)
         {
-            productViewModel.Search();
+            productViewModel.Search(productViewModel.ProductIndex);
         }
     }
 }

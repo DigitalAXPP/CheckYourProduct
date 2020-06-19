@@ -13,11 +13,11 @@ namespace CheckYourProduct.Test
             var model = new ProductViewModel();
 
             //-- Act
-            model.Search();
+            model.Search("3");
             var actual = model.TestItem;
 
             //-- Assert
-            Assert.Equal("TestSearch2", actual.Name);
+            Assert.Equal("Kraftkerni", actual.Name);
             Assert.Equal(Category.Food, actual.Category);
         }
     }

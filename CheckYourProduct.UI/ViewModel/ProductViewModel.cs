@@ -2,6 +2,7 @@
 using CheckYourProduct.UI.Views;
 using Domain;
 using Domain.Enum;
+using Data;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -65,29 +66,14 @@ namespace CheckYourProduct.UI.ViewModel
             };
         }
 
-        public void Search()
+        public void Search(string index)
         {
-            List<Product> list = new List<Product>()
+            var csv = new CSVReader();
+            var coll = csv.Read();
+
+            if (int.TryParse(index, out result))
             {
-                new Product()
-                {
-                    Name = "TestSearch1",
-                    Category = Category.Fashion
-                },
-                new Product()
-                {
-                    Name = "TestSearch2",
-                    Category = Category.Food
-                },
-                new Product()
-                {
-                    Name = "TestSearch3",
-                    Category = Category.IT
-                }
-            };
-            if (int.TryParse(ProductIndex, out result))
-            {
-                TestItem = list[result];
+                TestItem = coll[result];
                 
             }
         }

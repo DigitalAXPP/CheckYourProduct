@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Product.Domain\Do
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckYourProduct.Test", "CheckYourProduct.Test\CheckYourProduct.Test.csproj", "{5FFE13C7-521A-4085-AD56-855B25D66E6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Data", "Product.Data\Product.Data.csproj", "{769F488E-7D34-433C-82D0-3FDDBA5810A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Product.Data\Data.csproj", "{769F488E-7D34-433C-82D0-3FDDBA5810A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

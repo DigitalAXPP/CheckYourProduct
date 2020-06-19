@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CheckYourProduct.UI\CheckYourProduct.UI.csproj" />
-    <ProjectReference Include="..\Product.Data\Product.Data.csproj" />
+    <ProjectReference Include="..\Product.Data\Data.csproj" />
   </ItemGroup>
 
 </Project>

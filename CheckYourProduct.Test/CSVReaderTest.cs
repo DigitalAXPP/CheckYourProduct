@@ -1,4 +1,4 @@
-﻿using Product.Data;
+﻿using Data;
 using Xunit;
 
 namespace CheckYourProduct.Test
