@@ -73,8 +73,7 @@ namespace CheckYourProduct.UI.ViewModel
 
             if (int.TryParse(index, out result))
             {
-                TestItem = coll[result];
-                
+                TestItem = coll[result];                
             }
         }
 
