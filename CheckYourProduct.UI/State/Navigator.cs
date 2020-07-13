@@ -6,7 +6,18 @@ namespace CheckYourProduct.UI.State
 {
     public class Navigator : INavigator
     {
-        public ProductViewModelBase CurrentViewModel { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        private ProductViewModelBase _currentViewModel;
+        public ProductViewModelBase CurrentViewModel 
+        {
+            get
+            {
+                return _currentViewModel;
+            }
+            set
+            {
+                _currentViewModel = value;
+            }
+        }
 
         public ICommand UpdateCurrentViewModelCommand => throw new System.NotImplementedException();
     }
