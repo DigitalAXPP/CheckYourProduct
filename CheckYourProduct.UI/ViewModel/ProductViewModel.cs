@@ -42,7 +42,7 @@ namespace CheckYourProduct.UI.ViewModel
             set 
             { 
                 _testItem = value;
-                OnPropertyChanged("TestItem");
+                //OnPropertyChanged("TestItem");
             }
         }
 
