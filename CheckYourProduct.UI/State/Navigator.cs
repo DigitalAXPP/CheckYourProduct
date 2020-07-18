@@ -1,10 +1,12 @@
-﻿using CheckYourProduct.UI.State.Navigators;
+﻿using CheckYourProduct.UI.Commands;
+using CheckYourProduct.UI.Model;
+using CheckYourProduct.UI.State.Navigators;
 using CheckYourProduct.UI.ViewModel;
 using System.Windows.Input;
 
 namespace CheckYourProduct.UI.State
 {
-    public class Navigator : INavigator
+    public class Navigator : ObservableObjects, INavigator
     {
         private ProductViewModelBase _currentViewModel;
         public ProductViewModelBase CurrentViewModel 
@@ -16,9 +18,10 @@ namespace CheckYourProduct.UI.State
             set
             {
                 _currentViewModel = value;
+                OnPropertyChanged(nameof(CurrentViewModel));
             }
         }
 
-        public ICommand UpdateCurrentViewModelCommand => throw new System.NotImplementedException();
+        public ICommand UpdateCurrentViewModelCommand => new UpdateCurrentViewModelCommand(this);
     }
 }
